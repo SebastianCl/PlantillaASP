@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MdiMaster.master.cs" Inherits="prjCine.MdiMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/atuwaku.css" rel="stylesheet" />
+    <link href="resources/css/bootstrap.css" rel="stylesheet" />
+    <link href="resources/css/bootstrap-theme.css" rel="stylesheet" />
+    <script src="resources/js/jquery-3.1.1.min.js"></script>
+    <script src="resources/js/bootstrap.js"></script>
+    <title>Cinema Atu Waku</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>    
+    <div class="col-md-12">
+        <div class="pos-f-t">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4">
+                      <h4 class="text-white">Collapsed content</h4>
+                      <span class="text-muted">Toggleable via the navbar brand.</span>
+                </div>
+            </div>
+            <nav class="navbar navbar-dark bg-dark">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </div>
+    </div>
+    <form id="form1" runat="server" class="text-left">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
