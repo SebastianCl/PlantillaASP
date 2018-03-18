@@ -1,3 +1,0 @@
-# ShopCinema
-
-#UNDER CONSTRUCTION
