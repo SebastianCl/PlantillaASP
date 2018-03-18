@@ -4,38 +4,67 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link href="resources/css/atuwaku.css" rel="stylesheet" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>       
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <link href="resources/css/bootstrap.css" rel="stylesheet" />
-    <link href="resources/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="resources/css/bootstrap-theme.css" rel="stylesheet" /> 
+    <link href="resources/css/menu.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet"/>
     <script src="resources/js/jquery-3.1.1.min.js"></script>
-    <script src="resources/js/bootstrap.js"></script>
-    <title>Cinema Atu Waku</title>
+    <script src="resources/js/bootstrap.js"></script>    
+    <link href="resources/img/logoSmall.png" rel="icon" type="image/png"/>
+    <title>Cinema Atu Waku | MENU</title>    
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>    
-    <div class="col-md-12">
-        <div class="pos-f-t">
-            <div class="collapse" id="navbarToggleExternalContent">
-                <div class="bg-dark p-4">
-                      <h4 class="text-white">Collapsed content</h4>
-                      <span class="text-muted">Toggleable via the navbar brand.</span>
-                </div>
-            </div>
-            <nav class="navbar navbar-dark bg-dark">
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-            </nav>
+<body>     
+<div class="container">
+       <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">                
+                  <asp:Image id="imgLogo" runat="server" CssClass="img-responsive" ImageUrl="~/resources/img/logoBIG.png"/>
+                    <p>ATU WAKU</p>                    
+                </li>                
+                <li>
+                    <a href="#">Ingreso Cliente</a>
+                </li>
+                <li>
+                    <a href="#">Ventas</a>
+                </li>      
+                <li class="dropdown">
+                        <a class="accordion-toggle collapsed toggle-switch" data-toggle="collapse" href="#submenu-2">                            
+                            <span class="sidebar-title">Registros</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul id="submenu-2" class="panel-collapse collapse" role="menu">
+                            <li><a href="#">Cliente</a></li>
+                            <li><a href="#">Productos</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Administrador</a></li>
+                        </ul>
+                </li> 
+   
+            </ul>
         </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <a href="#menu-toggle" class="btn btn-info" id="menu-toggle">MENU</a>
+        <!-- /#page-content-wrapper -->
     </div>
-    <form id="form1" runat="server" class="text-left">
+    
+</div>
+    <!-- /#wrapper -->    
+     <!-- Menu Toggle Script -->
+    <script src="resources/js/menu.js"></script>
+
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
-    </form>
+    
 </body>
 </html>

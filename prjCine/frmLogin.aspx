@@ -1,12 +1,26 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MdiMaster.Master" AutoEventWireup="true" CodeBehind="frmLogin.aspx.cs" Inherits="prjCine.frmLogin" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmLogin.aspx.cs" Inherits="prjCine.WebForm2" %>
 
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, user-scale=1.0, maximum-scale=1.0, minimun-scale=1.0" />
+    <link href="resources/css/login.css" rel="stylesheet" />
+    <link href="resources/css/bootstrap.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet"/>
+    <link href="resources/css/bootstrap-theme.css" rel="stylesheet" />
+    <script src="resources/js/jquery-3.1.1.min.js"></script>
+    <script src="resources/js/bootstrap.js"></script>
+    <link href="resources/img/logoSmall.png" rel="icon" type="image/png"/>
+    <title>Cinema Atu Waku | LOGIN</title>
+</head>
+<body>
     <div class="text-center" style="padding:50px 0">
-	<asp:Image id="imgLogo" runat="server" CssClass="img-responsive center-block" ImageUrl="~/resources/img/snackbar.png"/>      
+	<asp:Image id="imgLogin" runat="server" CssClass="img-responsive center-block" ImageUrl="~/resources/img/snackbar.png"/>      
 	<!-- Main Form -->
-	<div class="login-form-1">       		
+	<div class="login-form-1">    
+        <form id="frmLogin" runat="server">        
 			<div class="login-form-main-message"></div>
 			<div class="main-login-form">
 				<div class="login-group">
@@ -22,13 +36,15 @@
 						<input type="checkbox" id="lg_remember" name="lg_remember"/>
 						<label for="lg_remember">recordar</label>
 					</div>
-				</div>
-				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+				</div>				
+                <asp:Button ID="btnEntrar" runat="server" CssClass="login-button" Text="IR" OnClick="btnEntrar_Click"/>
 			</div>
 			<div class="etc-login-form">
 				<p>¿Olvido su contraseña? <a href="#">click aqui</a></p>				
-			</div>		
+			</div>	
+            </form>   			
 	</div>
 	<!-- end:Main Form -->
 </div>   
-</asp:Content>
+</body>
+</html>
