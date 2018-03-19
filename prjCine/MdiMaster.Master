@@ -4,67 +4,121 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>       
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-    <link href="resources/css/bootstrap.css" rel="stylesheet" />
-    <link href="resources/css/bootstrap-theme.css" rel="stylesheet" /> 
-    <link href="resources/css/menu.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet"/>
-    <script src="resources/js/jquery-3.1.1.min.js"></script>
-    <script src="resources/js/bootstrap.js"></script>    
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>           
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="resources/img/logoSmall.png" rel="icon" type="image/png"/>
+    <link href="resources/css/bootstrap.css" rel="stylesheet" />              
+    <link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500" rel="stylesheet"/>
+    <link href="resources/css/custom.css" rel="stylesheet" />
     <title>Cinema Atu Waku | MENU</title>    
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>     
-<div class="container">
-       <div id="wrapper">
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">                
-                  <asp:Image id="imgLogo" runat="server" CssClass="img-responsive" ImageUrl="~/resources/img/logoBIG.png"/>
-                    <p>ATU WAKU</p>                    
-                </li>                
-                <li>
-                    <a href="#">Ingreso Cliente</a>
-                </li>
-                <li>
-                    <a href="#">Ventas</a>
-                </li>      
-                <li class="dropdown">
-                        <a class="accordion-toggle collapsed toggle-switch" data-toggle="collapse" href="#submenu-2">                            
-                            <span class="sidebar-title">Registros</span>
-                            <b class="caret"></b>
-                        </a>
-                        <ul id="submenu-2" class="panel-collapse collapse" role="menu">
-                            <li><a href="#">Cliente</a></li>
-                            <li><a href="#">Productos</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Administrador</a></li>
-                        </ul>
-                </li> 
-   
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
+    <header class="my-header">
+        <nav class="container navbar navbar-static-top">
+            <div class="navbar-header">
 
-        <!-- Page Content -->
-        <a href="#menu-toggle" class="btn btn-info" id="menu-toggle">MENU</a>
-        <!-- /#page-content-wrapper -->
+              <div class="my-logo">
+                <div class="pull-left">
+                    <a  class="hamburger" id="btnMenu">
+                      <i class="sr-only">Toggle navigation</i>
+                      <i class="fa fa-bars" aria-hidden="true"></i>
+                    </a> 
+                </div>
+                <span><b>Atu</b>Waku</span>
+                <div class="pull-right">
+                  <a class="navbar-toggle collapsed btnbarra" data-toggle="collapse" data-target="#barra-menu" >
+                    <i class="sr-only">Toggle navigation</i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                  </a> 
+                </div>
+
+              </div>
+
+              <div class="my-div-right">
+
+                <div class="navbar-collapse  collapse"  id="barra-menu">
+                <ul class="nav navbar-nav my-right-ul">
+                                  
+                  <li class="dropdown messages-menu">
+                      <a href="#" class="dropdown-toggle mytool" data-toggle="tooltip" data-placement="bottom" data-original-title="Notificaciones">
+                      <i class="fa fa-bell"></i>
+                      <span class="label label-default">4</span>
+                      </a>
+                  </li>
+
+                  <li class="dropdown user-menu">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="resources/img/default.png" class="user-image" />
+                        <span class="hidden-xs">  Perfil </span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li class="my-user-header">
+                          <img src="resources/img/default.png" class="img-circle" />
+                          <p>Sebastian Cardona - User ADMIN<br/>
+                            <small>Mar. 2018</small>
+                          </p>
+                        </li>
+                    
+                        <li class="my-user-footer">                            
+                            <div class="pull-right">
+                                <a href="frmLogin.aspx" class="btn btn-default"> <i class="fa fa-power-off"></i> Salir</a>
+                            </div>
+                        </li>
+                      </ul>                   
+                  </li>                         
+                </ul>
+                </div>
+
+              </div>
+                                                     
+              
+
+            </div>
+        </nav>
+     </header>
+
+     <div id="wrapper" >
+      <!-- Sidebar -->
+      <div class="navbar navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+        <ul class="nav sidebar-nav">
+          <li>
+              <a href="frmMenu.aspx">
+                 <asp:Image id="imgLogo" runat="server" CssClass="img-responsive" ImageUrl="~/resources/img/logoBIG.png"/>
+              </a>
+          </li>
+          <li class="my-li-nav">
+              <a href="frmMenu.aspx">Ingreso Cliente</a>
+          </li>
+          <li class="my-li-nav">
+            <a href="frmVentas.aspx">Regristar ventas</a>
+          </li>
+          <li class="dropdown my-li-nav">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nuevo <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header">Opciones de registros</li>
+                <li class="my-li-navG"><a href="frmRegistroCliente.aspx">Cliente</a></li>
+                <li class="my-li-navG"><a href="frmRegistroProducto.aspx">Producto</a></li>
+                <li class="divider"></li>
+                <li class="my-li-navY"><a href="#">Función</a></li>
+                <li class="my-li-navY"><a href="#">Sucursal</a></li>
+                <li class="divider"></li>
+                <li class="my-li-navR"><a href="#">Administrador</a></li>
+              </ul>
+          </li>        
+        </ul>
+      </div>
+      
     </div>
-    
-</div>
-    <!-- /#wrapper -->    
-     <!-- Menu Toggle Script -->
-    <script src="resources/js/menu.js"></script>
-
+    <script src="resources/js/jquery-3.1.1.min.js"></script>
+    <script src="resources/js/bootstrap.js"></script>
+    <script src="resources/js/myscript.js"></script>
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
-    </div>
-    
+    </div>    
 </body>
 </html>

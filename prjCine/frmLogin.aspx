@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, user-scale=1.0, maximum-scale=1.0, minimun-scale=1.0" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <link href="resources/css/login.css" rel="stylesheet" />
     <link href="resources/css/bootstrap.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet"/>
